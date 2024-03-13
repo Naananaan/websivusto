@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel ="stylesheet" href="style.css">
+    <title>Laskin</title>
+</head>
+<body>
+    <h1> LASKIN</h1>
+    <div class="wrapper">
+        <div class="container">
+            <div class="header-container">
+                </div>
+                <div class="row">
+                    <input type="text" id="result" name="result" placeholder="result" readonly/>
+                    <input type="button" value="Clear" onclick="clearResult()" id="clear-button"/>
+                </div>
+                <div class="row">
+                    <input type="button" value="7" onclick="update('7')"/>
+                    <input type="button" value="8" onclick="update('8')"/>
+                    <input type="button" value="9" onclick="update('9')"/>
+                    <input type="button" value="*" onclick="update('*')"/>
+                </div>
+                <div class="row">
+                    <input type="button" value="4" onclick="update('4')"/>
+                    <input type="button" value="5" onclick="update('5')"/>
+                    <input type="button" value="6" onclick="update('6')"/>
+                    <input type="button" value="-" onclick="update('-')"/>
+                </div>
+                <div class="row">
+                    <input type="button" value="1" onclick="update('1')"/>
+                    <input type="button" value="2" onclick="update('2')"/>
+                    <input type="button" value="3" onclick="update('3')"/>
+                    <input type="button" value="+" onclick="update('+')"/>
+                </div>
+                <div class="row">
+                    <input type="button" value="/" onclick="update('/')"/>
+                    <input type="button" value="0" onclick="update('0')"/>
+                    <input type="button" value="." onclick="update('.')"/>
+                    <input type="button" value="=" onclick="calculate()"/>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
