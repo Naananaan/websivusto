@@ -5,9 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel ="stylesheet" href="style.css">
     <title>Laskin</title>
+    <script src="script.js"></script>
 </head>
 <body>
-    <h1> LASKIN</h1>
+    <div class="background-image"></div>
+    <h1> TALOUSLASKIN</h1>
+    <h2> Ohjeet: Voit laskea taloutesi tulot, menot sekä säästöt. 
+        <br> ja laskea säästötavoitteen yhdeksi vuodeksi. 
+        Syötä laskimeen taloutesi kaikki tulot ja tallenna "tulot" näppäimestä.
+        Syötä laskimeen taloutesi kaikki menot ja tallenna "menot" näppäimestä.
+        Syötä laskimeen haluamasi summa säästötavoitteeseen, sinulle lasketaan 
+        automaattisesti kuukausittainen säästöön laitettava summa.</h2>
+    <h2 id="income">Tulot:</h2>
+    <h2 id="expenses">Menot:</h2>
+    <h2 id="remaining-money"> Jäljellä oleva raha:</h2>
+    <h2 id="savings-recommendation">Säästösuositus:</h2>
+    <h2 id="savings">Säästötavoite:</h2>
+    <h2 id="monthSavings">Kuukaudessa säästöön laitettava, <br>että tavoite täyttyy vuoden aikana:</h2>
     <div class="wrapper">
         <div class="container">
             <div class="header-container">
@@ -15,6 +29,7 @@
                 <div class="row">
                     <input type="text" id="result" name="result" placeholder="result" readonly/>
                     <input type="button" value="Clear" onclick="clearResult()" id="clear-button"/>
+                    <input type="button" value="<<" onclick="backSpace()" id="backspace-button"/>
                 </div>
                 <div class="row">
                     <input type="button" value="7" onclick="update('7')"/>
@@ -40,9 +55,14 @@
                     <input type="button" value="." onclick="update('.')"/>
                     <input type="button" value="=" onclick="calculate()"/>
                 </div>
+                <div class="row">
+                    <input type="button" value="Tulot" onclick="saveResult('income')"/>
+                    <input type="button" value="Menot" onclick="saveResult('expenses')"/>
+                    <input type="button" value="Säästö" onclick="saveResult('savings')"/>
+                </div>
             </div>
         </div>
     </div>
-    <script src="script.js"></script>
+
 </body>
 </html>
